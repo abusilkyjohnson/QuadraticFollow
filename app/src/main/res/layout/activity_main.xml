@@ -11,86 +11,93 @@
             type="com.example.quadraticappusingdatabinding.CalculationZone" />
     </data>
 
-<androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
 
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/onepiecemath"
-    tools:context=".MainActivity">
-
-
-    <EditText
-        android:id="@+id/enterA"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="23dp"
-        android:hint="Enter A"
-        android:text="@={equation.a}"
-        android:textColorHint="#FFC107"
-        app:layout_constraintBottom_toTopOf="@+id/enterB"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <EditText
-        android:text="@={equation.b}"
-        android:id="@+id/enterB"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="31dp"
-        android:hint="Enter B"
-        android:textColorHint="#FFC107"
-        app:layout_constraintBottom_toTopOf="@+id/enterC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterA" />
-
-    <EditText
-        android:id="@+id/enterC"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="33dp"
-        android:hint="Enter C"
-        android:text="@={equation.c}"
-        android:textColorHint="#FFC107"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterB" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="233dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="301dp"
-        app:layout_constraintBottom_toTopOf="@+id/enterA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/thoughtbubble" />
-
-    <TextView
-        android:id="@+id/submitTextV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="71dp"
-        android:text="Solution"
-        android:textSize="30dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:onClick="@{equation::QuadraticSolution}"
-        android:id="@+id/submit_Butt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginBottom="44dp"
-        android:text="Submit"
-        app:layout_constraintBottom_toTopOf="@+id/enterA"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/onepiecemath"
+        tools:context=".MainActivity">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/enterA"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="47dp"
+            android:hint="Enter A"
+            android:text="@={equation.a}"
+            android:textColor="#FB5621"
+            android:textColorHint="#FB5621"
+            app:layout_constraintBottom_toTopOf="@+id/enterB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/enterB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="55dp"
+            android:hint="Enter B"
+            android:text="@={equation.b}"
+            android:textColor="#FB5621"
+            android:textColorHint="#FB5621"
+            app:layout_constraintBottom_toTopOf="@+id/enterC"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <EditText
+            android:id="@+id/enterC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="81dp"
+            android:hint="Enter C"
+            android:text="@={equation.c}"
+            android:textColor="#FB5621"
+            android:textColorHint="#FB5621"
+            app:layout_constraintBottom_toTopOf="@+id/submit_Butt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enterB" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="233dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="67dp"
+            app:layout_constraintBottom_toTopOf="@+id/enterB"
+            app:layout_constraintEnd_toEndOf="@+id/enterA"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/thoughtbubble" />
+
+        <TextView
+            android:id="@+id/submitTextV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="62dp"
+            android:layout_marginTop="84dp"
+            android:layout_marginEnd="61dp"
+            android:layout_marginBottom="85dp"
+            android:text="Solution"
+            android:textColor="#FB5621"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="@+id/enterA"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/submit_Butt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="181dp"
+            android:onClick="@{equation::QuadraticSolution}"
+            android:text="Submit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enterC" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
