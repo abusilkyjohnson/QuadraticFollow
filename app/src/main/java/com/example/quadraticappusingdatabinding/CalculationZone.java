@@ -54,5 +54,24 @@ public class CalculationZone extends BaseObservable {
 
     public  void QuadraticSolution(View v){
 
+        double a = Double.parseDouble(getA());
+        double b = Double.parseDouble(getB());
+        double c = Double.parseDouble(getC());
+
+        double solutionP = (-b + Math.sqrt(((Math.pow(b,2))-(4*a*c))) )/(2*a);
+        double solutionN = (-b - Math.sqrt(((Math.pow(b,2))-(4*a*c))) )/(2*a);
+
+        //Displaying Result
+        if((4*a*c)>0)
+        {
+            abuBinding.submitTextV.setText("X+: " + solutionP + "\nX-: " + solutionN);
+        }
+        else if((4*a*c)< 0){
+            abuBinding.submitTextV.setText("No Real Solutions");
+        }
+        else
+        {
+            abuBinding.submitTextV.setText("X+: " + solutionP);
+        }
     }
 }

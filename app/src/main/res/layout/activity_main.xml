@@ -4,6 +4,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" >
+    
+    <data>
+        <variable
+            name="equation"
+            type="com.example.quadraticappusingdatabinding.CalculationZone" />
+    </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout
 
@@ -19,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="23dp"
         android:hint="Enter A"
+        android:text="@={equation.a}"
         android:textColorHint="#FFC107"
         app:layout_constraintBottom_toTopOf="@+id/enterB"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,6 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
+        android:text="@={equation.b}"
         android:id="@+id/enterB"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -43,6 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="33dp"
         android:hint="Enter C"
+        android:text="@={equation.c}"
         android:textColorHint="#FFC107"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +69,7 @@
         app:srcCompat="@drawable/thoughtbubble" />
 
     <TextView
-        android:id="@+id/submitView"
+        android:id="@+id/submitTextV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="71dp"
@@ -72,6 +81,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:onClick="@{equation::QuadraticSolution}"
         android:id="@+id/submit_Butt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
